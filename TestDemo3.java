@@ -15,7 +15,7 @@ public class TestDemo3 {
 //        System.out.println(myComepareTo(str,"avecefewfew"));
 //        System.out.println(myComepareTo(str,"sahdsh"));
         System.out.println(myComepareTo(str,"abeceedwder"));
-        System.out.println((int)str.charAt(0));
+        //System.out.println((int)str.charAt(0) - (int)str.charAt(1));
     }
     //自己的indexo方法
     public static int  myIndexOf(String str,char x,int t){
@@ -51,5 +51,19 @@ public class TestDemo3 {
             }
         }
         return  str.length() - str1.length();
+    }
+    public  static  int myComepareTo1(String str,String s){
+        if(str.length() == s.length()){
+            for (int i = 0; i <str.length() ; i++) {
+                if(str.charAt(i) == s.charAt(i)){
+                    return  0;
+                }else {
+                    int n = (int)str.charAt(i) - (int)s.charAt(i);
+                    return n;
+                }
+            }
+        }
+
+        return  str.length() - s.length();
     }
 }
